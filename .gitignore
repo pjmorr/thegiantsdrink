@@ -6,3 +6,9 @@ __pycache__/
 model_cache/
 transformers_cache/
 huggingface/
+*.pyo
+.coverage
+htmlcov/
+docs/
+dist/
+*.egg-info/

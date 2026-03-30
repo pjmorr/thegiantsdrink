@@ -1,0 +1,24 @@
+name: Docs
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pdoc -r requirements.txt
+      - run: PYTHONPATH=. pdoc adaptation_ai behavior_analyzer command_parser content_generator game_world simulation_engine main --output-dir docs
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
