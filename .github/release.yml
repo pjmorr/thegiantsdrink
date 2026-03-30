@@ -1,0 +1,26 @@
+changelog:
+  categories:
+    - title: "New Features"
+      labels:
+        - "enhancement"
+        - "feature"
+    - title: "Bug Fixes"
+      labels:
+        - "bug"
+        - "fix"
+    - title: "Documentation"
+      labels:
+        - "documentation"
+        - "docs"
+    - title: "Testing"
+      labels:
+        - "test"
+        - "testing"
+    - title: "CI / DevOps"
+      labels:
+        - "ci"
+        - "devops"
+        - "infrastructure"
+    - title: "Other Changes"
+      labels:
+        - "*"
